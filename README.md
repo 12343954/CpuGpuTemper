@@ -1,6 +1,10 @@
 ﻿# CpuGpuTemper
 A small and cute CPU/GPU/MEMORY monitor
 
+##base on 
+- .net 7.0
+- LibreHardwareMonitorLib (https://github.com/LibreHardwareMonitor/LibreHardwareMonitor)
+
 ## Features
 - 🌟 Monitor temperature and hardware occupancy
 - 🆒 As top window, modern ui design
@@ -20,3 +24,5 @@ A small and cute CPU/GPU/MEMORY monitor
     just double click the big number or around the space.
 
 
+## License
+CpuGpuTemper is free and open source software licensed under MPL 2.0. You can use it in private and commercial projects. Keep in mind that you must include a copy of the license in your project.
