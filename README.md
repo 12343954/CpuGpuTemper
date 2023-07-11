@@ -1,4 +1,10 @@
-﻿# CpuGpuTemper
+﻿<img src="image.png" style="margin-bottom:10rem; margin-left:0;margin-right:auto;width:600px;" />
+
+
+
+
+
+# CpuGpuTemper
 A small and cute CPU/GPU/MEMORY monitor
 
 ##base on 
