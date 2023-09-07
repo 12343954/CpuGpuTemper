@@ -1,8 +1,15 @@
-﻿<img src="image.png" style="margin-bottom:10rem; margin-left:0;margin-right:auto;width:600px;" />
-
-
-
-
+﻿
+<div style="text-align:center;">
+<p>
+<img src="https://github.com/12343954/CpuGpuTemper/assets/1804003/c0540b56-b8d6-42dc-9465-ca8cbbb6587a" style="width:1000px" />
+<p>V2</p>
+</p>
+<p>&nbsp;</p>
+<p>
+<img src="image.png" style="width:600px" />
+<p>V1</p>
+</p>
+</div>
 
 # CpuGpuTemper
 A small and cute CPU/GPU/MEMORY monitor
