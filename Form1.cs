@@ -1,5 +1,6 @@
 using LibreHardwareMonitor.Hardware;
 using System.Diagnostics;
+using System.Resources;
 
 namespace CoolooAI.CpuGpuTemperature
 {
@@ -7,6 +8,7 @@ namespace CoolooAI.CpuGpuTemperature
     {
         bool exit = false;
         bool is_started = false;
+        bool is_expand = false;
 
         Point mPoint;
 
@@ -23,6 +25,12 @@ namespace CoolooAI.CpuGpuTemperature
 
         private void Init()
         {
+            var form2 = new Form2();
+            form2.Show();
+
+            pictureBox2.Image = Properties.Resources.arrow_up;
+            this.Height = 230;
+
             hour_label.Text = "0";
             minute_label.Text = "00";
             second_label.Text = "00";
@@ -94,7 +102,7 @@ namespace CoolooAI.CpuGpuTemperature
                 var memo_used = memory?.Sensors.Where(p => p.Name == "Memory Used").FirstOrDefault()?.Value;
                 var memo_avail = memory?.Sensors.Where(p => p.Name == "Memory Available").FirstOrDefault()?.Value;
 
-                Invoke(new Action(() =>
+                this.Invoke(new Action(() =>
                 {
                     cpu_temp_label.Text = $"{cpu?.Sensors.Where(p => p.Name == "Core Max").Where(p => p.SensorType == SensorType.Temperature).FirstOrDefault()?.Value}бу";
                     gpu_temp_label.Text = $"{gpu?.Sensors.Where(p => p.Name == "GPU Core").ToList().Where(p => p.SensorType == SensorType.Temperature).FirstOrDefault()?.Value}бу";
@@ -228,6 +236,24 @@ namespace CoolooAI.CpuGpuTemperature
             minute_label.Text = "00";
             second_label.Text = "00";
             mill_label.Text = "000";
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            is_expand = !is_expand;
+            if (is_expand)
+            {
+                pictureBox2.Image = Properties.Resources.arrow_up;
+                this.Height = 230;
+
+            }
+            else
+            {
+                pictureBox2.Image = Properties.Resources.arrow_down;
+                this.Height = 400;
+
+            }
+
         }
     }
 }

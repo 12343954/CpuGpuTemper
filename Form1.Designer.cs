@@ -34,6 +34,7 @@
             timer1 = new System.Windows.Forms.Timer(components);
             button1 = new Button();
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
             panel2 = new Panel();
             mill_label = new Label();
             minute_label = new Label();
@@ -55,6 +56,7 @@
             watcher_timer = new System.Windows.Forms.Timer(components);
             count_timer = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -69,7 +71,7 @@
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ScrollBars = ScrollBars.Vertical;
-            textBox1.Size = new Size(685, 0);
+            textBox1.Size = new Size(685, 178);
             textBox1.TabIndex = 0;
             // 
             // timer1
@@ -93,6 +95,7 @@
             // 
             panel1.BackColor = SystemColors.Desktop;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox1);
@@ -109,12 +112,24 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 418);
+            panel1.Size = new Size(800, 412);
             panel1.TabIndex = 2;
             panel1.MouseDown += panel1_MouseDown;
             panel1.MouseEnter += panel1_MouseEnter;
             panel1.MouseLeave += panel1_MouseLeave;
             panel1.MouseMove += panel1_MouseMove;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Cursor = Cursors.Hand;
+            pictureBox2.Image = Properties.Resources.arrow_down;
+            pictureBox2.Location = new Point(702, 25);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(20, 10);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // panel2
             // 
@@ -346,7 +361,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Desktop;
-            ClientSize = new Size(800, 418);
+            ClientSize = new Size(800, 412);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -359,6 +374,7 @@
             MouseMove += Form1_MouseMove;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -391,5 +407,6 @@
         private Label hour_label;
         private System.Windows.Forms.Timer count_timer;
         private Panel panel2;
+        private PictureBox pictureBox2;
     }
 }
