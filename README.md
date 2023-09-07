@@ -6,7 +6,7 @@
 </p>
 <p>&nbsp;</p>
 <p>
-<img src="image.png" style="width:600px" />
+<img src="https://raw.githubusercontent.com/12343954/CpuGpuTemper/main/image.png" style="width:600px" />
 <p>V1</p>
 </p>
 </div>
