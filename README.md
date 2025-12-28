@@ -1,21 +1,35 @@
-﻿
-<div style="text-align:center;">
-<p>
-<img src="https://github.com/12343954/CpuGpuTemper/assets/1804003/c0540b56-b8d6-42dc-9465-ca8cbbb6587a" style="width:1000px" />
-<p>V2</p>
-</p>
-<p>&nbsp;</p>
-<p>
-<img src="https://raw.githubusercontent.com/12343954/CpuGpuTemper/main/image.png" style="width:600px" />
-<p>V1</p>
-</p>
-</div>
-
-# CpuGpuTemper
+﻿# CpuGpuTemper
 A small and cute CPU/GPU/MEMORY monitor
 
-##base on 
-- .net 7.0
+<table>
+    <tr>
+        <td>
+            <p>V2.1</p>
+            <img src="./images/v2.1.png" style="width:1000px" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>V2.0</p>
+            <img src="./images/v2.0.png" style="width:1000px" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>V1.0</p>
+            <img src="./images/v1.0.png" style="width:1000px" />
+        </td>
+    </tr>
+</table>
+
+
+<p>&nbsp;</p>
+
+
+
+
+## Based on 
+- .net 9.0
 - LibreHardwareMonitorLib (https://github.com/LibreHardwareMonitor/LibreHardwareMonitor)
 
 ## Features
