@@ -1,24 +1,11 @@
 ﻿# CpuGpuTemper
 A small, always-on-top CPU/GPU/MEMORY monitor
 
-<table>
-    <tr>
-        <td>
-            <p>V2.2</p>
-            <p>
-                https://github.com/user-attachments/assets/175d78cb-de84-482c-a9c7-7c393e0c5fec
-            </p>
-        </td>
-    </tr>
-</table>
+<p>V2.2</p>
 
 https://github.com/user-attachments/assets/175d78cb-de84-482c-a9c7-7c393e0c5fec
 
-
-
 <p>&nbsp;</p>
-
-
 
 
 ## Based on 
