@@ -6,8 +6,8 @@ A small, always-on-top CPU/GPU/MEMORY monitor
         <td>
             <p>V2.2</p>
             <p>
-                <video src="./images/v.mp4" controls style="max-width:800px"></video>
-https://github.com/user-attachments/assets/175d78cb-de84-482c-a9c7-7c393e0c5fec
+                <video src="" controls style="max-width:800px"></video>
+[./images/v.mp4](https://github.com/user-attachments/assets/175d78cb-de84-482c-a9c7-7c393e0c5fec)
             </p>
         </td>
     </tr>
