@@ -13,7 +13,7 @@
     <Authors>CoolooAI</Authors>
     <Description>Monitor for cpu, gpu and memo</Description>
     <Copyright>2023 @ CoolooAI</Copyright>
-    <Version>2.1.0</Version>
+    <Version>2.2.0</Version>
     <Title>CpuGpuTemper</Title>
   </PropertyGroup>
 

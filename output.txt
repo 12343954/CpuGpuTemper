@@ -1,0 +1,94 @@
+
+Cpu 型号是 Intel Core i7-9700 
+CPU Core #1 的 Load 是 21.770239
+CPU Core #2 的 Load 是 34.47271
+CPU Core #3 的 Load 是 25.573868
+CPU Core #4 的 Load 是 19.046545
+CPU Core #5 的 Load 是 15.782827
+CPU Core #6 的 Load 是 35.57842
+CPU Core #7 的 Load 是 22.728855
+CPU Core #8 的 Load 是 29.10862
+CPU Total 的 Load 是 25.507767
+CPU Core #1 的 Temperature 是 47
+CPU Core #2 的 Temperature 是 44
+CPU Core #3 的 Temperature 是 44
+CPU Core #4 的 Temperature 是 44
+CPU Core #5 的 Temperature 是 44
+CPU Core #6 的 Temperature 是 50
+CPU Core #7 的 Temperature 是 45
+CPU Core #8 的 Temperature 是 43
+CPU Package 的 Temperature 是 50
+CPU Core #1 Distance to TjMax 的 Temperature 是 53
+CPU Core #2 Distance to TjMax 的 Temperature 是 56
+CPU Core #3 Distance to TjMax 的 Temperature 是 56
+CPU Core #4 Distance to TjMax 的 Temperature 是 56
+CPU Core #5 Distance to TjMax 的 Temperature 是 56
+CPU Core #6 Distance to TjMax 的 Temperature 是 50
+CPU Core #7 Distance to TjMax 的 Temperature 是 55
+CPU Core #8 Distance to TjMax 的 Temperature 是 57
+Core Max 的 Temperature 是 50
+Core Average 的 Temperature 是 45.125
+CPU Core #1 的 Clock 是 4500.116
+CPU Core #2 的 Clock 是 4400.114
+CPU Core #3 的 Clock 是 4400.114
+CPU Core #4 的 Clock 是 4400.114
+CPU Core #5 的 Clock 是 4400.114
+CPU Core #6 的 Clock 是 4400.114
+CPU Core #7 的 Clock 是 4400.114
+CPU Core #8 的 Clock 是 4400.114
+CPU Package 的 Power 是 40.386753
+CPU Cores 的 Power 是 33.9111
+CPU Memory 的 Power 是 0
+CPU Core 的 Voltage 是 1.1635742
+CPU Core #1 的 Voltage 是 1.1539307
+CPU Core #2 的 Voltage 是 1.1546631
+CPU Core #3 的 Voltage 是 1.1481934
+CPU Core #4 的 Voltage 是 1.159668
+CPU Core #5 的 Voltage 是 1.1656494
+CPU Core #6 的 Voltage 是 1.1656494
+CPU Core #7 的 Voltage 是 1.1756592
+CPU Core #8 的 Voltage 是 1.1806641
+Bus Speed 的 Clock 是 100.00259
+
+Memory 型号是 Generic Memory 
+Memory Used 的 Data 是 15.807659
+Memory Available 的 Data 是 16.125587
+Memory 的 Load 是 49.5022
+Virtual Memory Used 的 Data 是 29.366188
+Virtual Memory Available 的 Data 是 8.567059
+Virtual Memory 的 Load 是 77.415436
+
+GpuNvidia 型号是 NVIDIA GeForce RTX 2080 Ti 
+GPU Core 的 Temperature 是 34
+GPU Core 的 Clock 是 300
+GPU Memory 的 Clock 是 405
+GPU Fan 1 的 Fan 是 1568
+GPU Fan 2 的 Fan 是 0
+GPU Fan 1 的 Control 是 0
+GPU Fan 2 的 Control 是 0
+GPU Core 的 Load 是 10
+GPU Memory Controller 的 Load 是 9
+GPU Video Engine 的 Load 是 0
+GPU Bus 的 Load 是 0
+GPU Power 的 Load 是 9.593
+GPU Board Power 的 Load 是 11.283
+D3D Dedicated Memory Used 的 SmallData 是 4913.742
+D3D Shared Memory Used 的 SmallData 是 136.5039
+D3D 3D 的 Load 是 0
+D3D Overlay 的 Load 是 0
+D3D Video Decode 的 Load 是 0
+D3D Copy 的 Load 是 0.2535789
+D3D Copy 的 Load 是 0
+D3D Copy 的 Load 是 0
+D3D Security 的 Load 是 0
+D3D Video Encode 的 Load 是 0
+D3D VR 的 Load 是 0
+GPU Hot Spot 的 Temperature 是 47.4375
+GPU Memory Junction 的 Temperature 是 46.125
+GPU Memory Total 的 SmallData 是 22528
+GPU Memory Free 的 SmallData 是 17344
+GPU Memory Used 的 SmallData 是 5183
+GPU Memory 的 Load 是 23.00694
+GPU Package 的 Power 是 28.78
+GPU PCIe Rx 的 Throughput 是 138240000
+GPU PCIe Tx 的 Throughput 是 3072000

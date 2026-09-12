@@ -1,7 +1,6 @@
 ﻿using LibreHardwareMonitor.Hardware;
 using ScottPlot;
 using System.Data;
-using System.Diagnostics;
 
 namespace CoolooAI.CpuGpuTemperature
 {
@@ -20,6 +19,8 @@ namespace CoolooAI.CpuGpuTemperature
 
         Computer computer;
         UpdateVisitor updateVisitor;
+
+        private readonly Random _random = new Random();
 
         List<double> dataX = new List<double> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, };
         public Form2()
@@ -59,6 +60,10 @@ namespace CoolooAI.CpuGpuTemperature
             formsPlot3.Plot.XAxis.Label(label: "GPU", bold: true, fontName: "Microsoft Yahei UI");
             formsPlot3.Plot.XAxis.LabelStyle(fontName: "Consolas", fontSize: 20);
 
+            //temperature bar
+            cpu_temp.Visible = false;
+            gpu_temp.Visible = false;
+
             computer = new Computer
             {
                 IsCpuEnabled = true,
@@ -86,6 +91,20 @@ namespace CoolooAI.CpuGpuTemperature
         private void Timer1_Tick(object? sender, EventArgs e)
         {
             Loop();
+
+            //TestTemperater();
+        }
+
+        private void TestTemperater()
+        {
+            BeginInvoke(() =>
+            {
+                float cpuTemp = GenerateRealisticCpuTemp();
+                float gpuTemp = GenerateRealisticGpuTemp(cpuTemp);
+
+                cpu_temp.Value = gpuTemp;
+                gpu_temp.Value = cpuTemp;
+            });
         }
 
         public void Monitor()
@@ -143,7 +162,6 @@ namespace CoolooAI.CpuGpuTemperature
                 gpuTemper = Convert.ToInt32(gpu?.Sensors.Where(p => p.Name == "GPU Core").ToList().Where(p => p.SensorType == SensorType.Temperature).FirstOrDefault()?.Value);
                 memoTemper = Convert.ToInt32(memo_used + memo_avail);
 
-
                 cpuList.RemoveAt(0);
                 cpuList.Add(Convert.ToDouble(cpu?.Sensors.Where(p => p.Name == "CPU Total").Where(p => p.SensorType == SensorType.Load).FirstOrDefault()?.Value));
 
@@ -155,6 +173,9 @@ namespace CoolooAI.CpuGpuTemperature
 
                 this?.Invoke(new Action(() =>
                 {
+                    cpu_temp.Value = cpuTemper;
+                    gpu_temp.Value = gpuTemper;
+
                     formsPlot1.Plot.XAxis.Label($"{cpuName}\n{cpu?.Sensors.Where(p => p.Name == "CPU Total").Where(p => p.SensorType == SensorType.Load).FirstOrDefault()?.Value?.ToInt()}% {cpuTemper}°");
                     formsPlot2.Plot.XAxis.Label($"{memoName} {memoTemper}GB\n{Math.Round(memo_used ?? 0, 0)}GB ({(memo_used / (memo_used + memo_avail))?.ToString("P")})");
                     formsPlot3.Plot.XAxis.Label($"{gpuName} {Math.Round((gpu_total / 1024) ?? 0, 0)}GB\n{Math.Round(gpu_used / 1024 ?? 0, 0)}GB {gpuTemper}°");
@@ -185,6 +206,8 @@ namespace CoolooAI.CpuGpuTemperature
                         formsPlot1.Visible = true;
                         formsPlot2.Visible = true;
                         formsPlot3.Visible = true;
+                        cpu_temp.Visible = true;
+                        gpu_temp.Visible = true;
                     }
                 }));
 
@@ -241,5 +264,28 @@ namespace CoolooAI.CpuGpuTemperature
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        #region //温度自生成
+        // 放在 Form1 类内部，Timer_Tick 方法的下方即可
+        private float GenerateRealisticCpuTemp()
+        {
+            // 模拟真实 CPU 温度（有波动）
+            float baseTemp = 55f;               // 正常空闲 ~ 负载中值
+            float fluctuation = (float)(_random.NextDouble() * 20 - 10); // ±10℃ 随机波动
+            float loadSpike = _random.Next(10) < 2 ? _random.Next(15, 35) : 0; // 20% 概率负载突增
+
+            float temp = baseTemp + fluctuation + loadSpike;
+            return Math.Clamp(temp, 35f, 95f);
+        }
+
+        private float GenerateRealisticGpuTemp(float cpuTemp)
+        {
+            // 模拟 GPU 温度（通常比 CPU 低一些）
+            float offset = (float)(_random.NextDouble() * 10 - 5); // ±5℃ 差异
+            float temp = cpuTemp - 10f + offset;                   // 比 CPU 平均低 10℃ 左右
+            return Math.Clamp(temp, 35f, 90f);
+        }
+
+        #endregion
     }
 }

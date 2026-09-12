@@ -1,23 +1,13 @@
 ﻿# CpuGpuTemper
-A small and cute CPU/GPU/MEMORY monitor
+A small, always-on-top CPU/GPU/MEMORY monitor
 
 <table>
     <tr>
         <td>
-            <p>V2.1</p>
-            <img src="./images/v2.1.png" style="width:1000px" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>V2.0</p>
-            <img src="./images/v2.0.png" style="width:1000px" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>V1.0</p>
-            <img src="./images/v1.0.png" style="width:1000px" />
+            <p>V2.2</p>
+            <p>
+                <video src="./images/v.mp4" controls style="max-width:800px"></video>
+            </p>
         </td>
     </tr>
 </table>

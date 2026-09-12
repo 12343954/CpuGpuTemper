@@ -1,0 +1,12 @@
+# Build results
+bin/
+obj/
+.vs/
+
+# User-specific files
+*.user
+*.suo
+*.csproj.user
+
+# Output files
+output.txt
