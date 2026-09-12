@@ -12,7 +12,7 @@ A small, always-on-top CPU/GPU/MEMORY monitor
     </tr>
 </table>
 
-
+https://github.com/user-attachments/assets/175d78cb-de84-482c-a9c7-7c393e0c5fec
 
 
 
